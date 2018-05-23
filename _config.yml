@@ -3,7 +3,7 @@ author: "Zdamao"
 description: "Sketchup的使用、插件和插件开发"
 more: "read more »"
 url: "https://cgclip.com"
-baseurl: "/contrast"
+# baseurl: "/contrast"
 paginate: 2
 permalink: pretty
 excerpt_separator: "\n\n\n" # two blank lines
