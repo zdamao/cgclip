@@ -1,3 +1,4 @@
 .idea
 *.xml
 .sass-cache/
+.DS_Store
