@@ -24,6 +24,27 @@
   
   <article>
     <header>
+      <h1><a href="/objects/2017/02/02/example-objects/">Example Objects</a></h1>
+      <time datetime="2017-02-02T06:30:00+08:00">February 2, 2017</time>
+    </header>
+<h3 id="code">Code</h3>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="k">static</span> <span class="kt">void</span> <span class="nf">asyncEnabled</span><span class="p">(</span><span class="n">Dict</span><span class="o">*</span> <span class="n">args</span><span class="p">,</span> <span class="kt">void</span><span class="o">*</span> <span class="n">vAdmin</span><span class="p">,</span> <span class="n">String</span><span class="o">*</span> <span class="n">txid</span><span class="p">,</span> <span class="k">struct</span> <span class="n">Allocator</span><span class="o">*</span> <span class="n">requestAlloc</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span> <span class="n">admin</span> <span class="o">=</span> <span class="n">Identity_check</span><span class="p">((</span><span class="k">struct</span> <span class="n">Admin</span><span class="o">*</span><span class="p">)</span> <span class="n">vAdmin</span><span class="p">);</span>
+    <span class="kt">int64_t</span> <span class="n">enabled</span> <span class="o">=</span> <span class="n">admin</span><span class="o">-&gt;</span><span class="n">asyncEnabled</span><span class="p">;</span>
+    <span class="n">Dict</span> <span class="n">d</span> <span class="o">=</span> <span class="n">Dict_CONST</span><span class="p">(</span><span class="n">String_CONST</span><span class="p">(</span><span class="s">"asyncEnabled"</span><span class="p">),</span> <span class="n">Int_OBJ</span><span class="p">(</span><span class="n">enabled</span><span class="p">),</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="n">Admin_sendMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">d</span><span class="p">,</span> <span class="n">txid</span><span class="p">,</span> <span class="n">admin</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+
+    
+    <footer><a class="ghost" href="/objects/2017/02/02/example-objects/">read more »</a></footer>
+    
+  </article>
+
+  <article>
+    <header>
       <h1><a href="/text/2017/01/18/example-text/">Lorem ipsum dolor sit amet consectetur adipiscing elit</a></h1>
       <time datetime="2017-01-18T07:37:00+08:00">January 18, 2017</time>
     </header>
@@ -37,28 +58,12 @@
     
   </article>
 
-  <article>
-    <header>
-      <h1><a href="/2017/01/01/pagination-works/">Pagination works</a></h1>
-      <time datetime="2017-01-01T08:30:00+08:00">January 1, 2017</time>
-    </header>
-<blockquote>
-  <p>Pagination is the process of dividing a document into discrete pages, either electronic pages or printed pages.</p>
-
-  <p>In reference to books produced without a computer, pagination can mean the consecutive page numbering to indicate the proper order of the pages, which was rarely found in documents pre-dating 1500, and only became common practice c. 1550, when it replaced foliation, which numbered only the front sides of folios.</p>
-
-  <p>- <a href="https://en.wikipedia.org/wiki/Pagination">Wikipedia</a></p>
-</blockquote>
-
-    
-  </article>
-
 </main>
 
 <footer>
     <a  class="gray" href="/" >« newer posts</a>
-    <span class="paginate">page 2 of 2</span>
-    <a  class="disabled" >older posts »</a>
+    <span class="paginate">page 2 of 3</span>
+    <a  class="gray" href="/page3" >older posts »</a>
 </footer>
 
 
